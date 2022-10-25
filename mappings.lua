@@ -4,7 +4,11 @@ local function termcodes(str)
 end
 
 local M = {}
-M.disabled = { }
+M.disabled = {
+    n = {
+        ["<C-c>"] = {}
+    }
+}
 M.nvterm = {
     t = {
         ["<leader>t"] = {
