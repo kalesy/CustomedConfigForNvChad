@@ -1,3 +1,4 @@
+-- Custom mappings
 local function termcodes(str)
     return vim.api.nvim_replace_termcodes(str, true, true, true)
 end
@@ -56,7 +57,7 @@ M.nvterm = {
 }
 M.nvimtree = {
     n = {
-        ["t"] = { "<cmd> NvimTreeFocus <CR>", "focus nvimtree" },
+        ["t"] = { "<cmd> NvimTreeToggle <CR>", "toggle nvimtree" },
         -- focus
         ["<C-t>"] = { "<cmd> NvimTreeFocus <CR>", "focus nvimtree" },
     }
@@ -75,11 +76,20 @@ M.general = {
         ["<C-j>"] = { "5j", "fast down" },
         ["<C-k>"] = { "5k", "fast up" },
         ["<A-q>"] = { ":q<CR>", "fast up" },
+        -- resize window
+        ["<C-Left>"] = { ":vertical resize -5<CR>", "shunk horizontal window size" },
+        ["<C-Right>"] = { ":vertical resize +5<CR>", "expand horizontal window size" },
+        ["<C-Up>"] = { ":resize -5<CR>", "shunk horizontal window size" },
+        ["<C-Down>"] = { ":resize +5<CR>", "expand horizontal window size" },
     },
     i = {
         ["<C-q>"] = { "<ESC>^i", "beginning of line" },
         ["<C-e>"] = { "<End>", "end of line" },
     },
     t = { ["<ESC>"] = { termcodes "<C-\\><C-N>", "escape terminal mode" } },
+    v = {
+        ['J'] = {":move '>+1<CR>gv-gv", "move text down"},
+        ['K'] = {":move '<-2<CR>gv-gv", "move text up"},
+    }
 }
 return M
