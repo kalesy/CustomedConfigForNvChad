@@ -90,7 +90,13 @@ M.general = {
         ["<C-q>"] = { "<ESC>^i", "beginning of line" },
         ["<C-e>"] = { "<End>", "end of line" },
     },
-    t = { ["<ESC>"] = { termcodes "<C-\\><C-N>", "escape terminal mode" } },
+    t = {
+        ["<ESC>"] = { termcodes "<C-\\><C-N>", "escape terminal mode" },
+        ["<A-h>"]= {"<C-\\><C-N><C-w>h", "go left"},
+        ["<A-j>"]= {"<C-\\><C-N><C-w>j", "go right"},
+        ["<A-k>"]= {"<C-\\><C-N><C-w>k", "go up"},
+        ["<A-l>"]= {"<C-\\><C-N><C-w>l", "go down"},
+    },
     v = {
         ['J'] = {":move '>+1<CR>gv-gv", "move text down"},
         ['K'] = {":move '<-2<CR>gv-gv", "move text up"},

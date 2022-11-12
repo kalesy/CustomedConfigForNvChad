@@ -40,6 +40,10 @@ return {
                 hide_root_folder = false,
             },
         }
-    }
+    },
+	["lukas-reineke/indent-black"] = {
+		show_current_context = true,
+		show_current_context_start = true
+	}
 }
 
