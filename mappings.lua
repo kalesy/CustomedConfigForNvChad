@@ -102,4 +102,15 @@ M.general = {
         ['K'] = {":move '<-2<CR>gv-gv", "move text up"},
     }
 }
+M.tabufline = {
+    n = {
+
+        ["<A-x>"] = {
+          function()
+            require("nvchad_ui.tabufline").close_buffer()
+          end,
+          "close buffer",
+        },
+    },
+}
 return M
