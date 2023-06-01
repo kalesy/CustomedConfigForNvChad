@@ -1,18 +1,5 @@
-local opt = vim.opt
-local g = vim.g
-local config = require("core.utils").load_config()
--- Indenting
-opt.expandtab = true
-opt.shiftwidth = 4
-opt.smartindent = true
-opt.tabstop = 4
-opt.softtabstop = 4
-opt.ignorecase = false
-opt.smartcase = false
-opt.swapfile = false
-g.mapleader = ';'
-
 return {
+    ["cameron/rainbow_csv"] = {},
     ["nvim-telescope/telescope"] = {
         override_options = {
             mappings = {
@@ -48,13 +35,5 @@ return {
 		show_current_context = true,
 		show_current_context_start = true
 	},
-    ["NvChad/ui"] = {
-        override_options = {
-            tabufline = {
-                enable = false,
-            },
-        },
-    },
     ["friendly-snippets"] = false
 }
-
