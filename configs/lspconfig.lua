@@ -26,6 +26,8 @@ lspconfig.lua_ls.setup {
 }
 
 lspconfig.pyright.setup{
+    on_attach = on_attach,
+    capabilities = capabilities,
     cmd = {"pyright-langserver", "--stdio"},
     filetypes = {"python"},
     single_file_support = true,
@@ -38,4 +40,12 @@ lspconfig.pyright.setup{
             }
         }
     },
+}
+
+lspconfig.gdscript.setup{
+    on_attach = on_attach,
+    capabilities = capabilities,
+    filetypes = {"gd", "gdscript", "gdscript3"},
+    --root_dir = util.root_pattern("project.godot", ".git"),
+    flags = {debounce_text_changes = 150,}
 }

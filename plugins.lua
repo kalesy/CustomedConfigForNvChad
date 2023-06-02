@@ -22,7 +22,8 @@ return  {
         opts = {
             ensure_installed = {
                 "lua-language-server",
-                "pyright"
+                "pyright",
+                "gdtoolkit"
             }
         }
     },
