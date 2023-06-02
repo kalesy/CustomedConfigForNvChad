@@ -1,5 +1,10 @@
 return  {
-    {"mechatroner/rainbow_csv", lazy = true},
+    {
+        "mechatroner/rainbow_csv", lazy = true
+    },
+    {
+        "mfussenegger/nvim-dap",
+    },
     {
         "neovim/nvim-lspconfig",
         config = function()
@@ -9,6 +14,10 @@ return  {
 
     },
     {
+        "rcarriga/nvim-dap-ui",
+        dependencies = {"mfussenegger/nvim-dap"}
+    },
+    {
         "williamboman/mason.nvim",
         opts = {
             ensure_installed = {
@@ -16,5 +25,5 @@ return  {
                 "pyright"
             }
         }
-    }
+    },
 }
