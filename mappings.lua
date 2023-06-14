@@ -113,4 +113,5 @@ M.tabufline = {
         },
     },
 }
+M.debug = { }
 return M

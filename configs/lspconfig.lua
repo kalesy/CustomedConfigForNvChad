@@ -2,7 +2,6 @@ local on_attach = require("plugins.configs.lspconfig").on_attach
 local capabilities = require("plugins.configs.lspconfig").capabilities
 
 local lspconfig = require "lspconfig"
--- local servers = {"lua_ls", "pyright"}
 
 lspconfig.lua_ls.setup {
     on_attach = on_attach,

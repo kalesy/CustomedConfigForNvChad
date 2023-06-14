@@ -11,6 +11,11 @@ opt.ignorecase = false
 opt.smartcase = false
 opt.swapfile = false
 g.mapleader = ';'
+-- Neovide gui configuration
+if vim.g.neovide then
+    vim.o.guifont = "CaskaydiaCove Nerd Font Mono:h13"
+    vim.g.neovide_remember_window_size = true
+end
 
 return {
     ["nvim-telescope/telescope"] = {
