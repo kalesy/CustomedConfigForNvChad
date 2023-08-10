@@ -1,18 +1,18 @@
 return  {
-    -- {
-    --     "cameron-wags/rainbow_csv.nvim",
-    --     config = function ()
-    --         require 'rainbow_csv'.setup()
-    --     end,
-    --     module = {
-    --         'rainbow_csv',
-    --         'rainbow_csv.fns'
-    --     },
-    --     ft = {
-    --         'csv',
-    --         'tsv',
-    --     }
-    -- },
+    {
+        "cameron-wags/rainbow_csv.nvim",
+        config = function ()
+            require 'rainbow_csv'.setup()
+        end,
+        module = {
+            'rainbow_csv',
+            'rainbow_csv.fns'
+        },
+        ft = {
+            'csv',
+            'tsv',
+        }
+    },
     {"mfussenegger/nvim-dap-python",},
     {"theHamsta/nvim-dap-virtual-text"},
     {"rcarriga/nvim-dap-ui"},
