@@ -10,6 +10,7 @@ opt.softtabstop = 4
 opt.ignorecase = false
 opt.smartcase = false
 opt.swapfile = false
+opt.fileencodings={'utf-8', 'ucs-bom', 'shift-jis', 'gb18030', 'gbk', 'gb2312', 'cp936', 'utf-16-be', 'utf-16-le', 'utf-32-be', 'utf-32-le'}
 g.mapleader = ';'
 -- Neovide gui configuration
 if vim.g.neovide then
