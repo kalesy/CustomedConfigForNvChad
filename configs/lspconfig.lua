@@ -29,6 +29,7 @@ lspconfig.pyright.setup{
     capabilities = capabilities,
     cmd = {"pyright-langserver", "--stdio"},
     filetypes = {"python"},
+    root_dir = util.root_partten(unpack(root_files)),
     single_file_support = true,
     settings = {
         python = {
