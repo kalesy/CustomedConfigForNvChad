@@ -1,5 +1,16 @@
 local on_attach = require("plugins.configs.lspconfig").on_attach
 local capabilities = require("plugins.configs.lspconfig").capabilities
+local util = require('lspconfig.util')
+local root_files = {
+    'pyproject.toml',
+    'setup.py',
+    'setup.cfg',
+    'requirements.txt',
+    'Pipfile',
+    'pyrightconfig.json',
+    '.git',
+    '.gitignore',
+}
 
 local lspconfig = require "lspconfig"
 
@@ -29,7 +40,7 @@ lspconfig.pyright.setup{
     capabilities = capabilities,
     cmd = {"pyright-langserver", "--stdio"},
     filetypes = {"python"},
-    root_dir = util.root_partten(unpack(root_files)),
+    root_dir = util.root_pattern(unpack(root_files)),
     single_file_support = true,
     settings = {
         python = {
