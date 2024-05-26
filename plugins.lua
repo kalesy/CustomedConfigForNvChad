@@ -13,28 +13,6 @@ return  {
             'tsv',
         }
     },
-    {"mfussenegger/nvim-dap-python",},
-    {"theHamsta/nvim-dap-virtual-text"},
-    {"rcarriga/nvim-dap-ui"},
-    {"nvim-telescope/telescope-dap.nvim"},
-    {
-        "mfussenegger/nvim-dap",
-        opt = true,
-        event = "BufReadPre",
-        module = { "dap" },
-        wants = { "nvim-dap-virtual-text", "DAPInstall.nvim", "nvim-dap-ui", "nvim-dap-python", "which-key.nvim" },
-        requires = {
-            "Pocco81/DAPInstall.nvim",
-            "theHamsta/nvim-dap-virtual-text",
-            "rcarriga/nvim-dap-ui",
-            "mfussenegger/nvim-dap-python",
-            "nvim-telescope/telescope-dap.nvim",
-            { "jbyuki/one-small-step-for-vimkind", module = "osv" },
-        },
-        config = function()
-            require("custom.configs.dap").setup()
-        end,
-    },
     {
         'Timuntersberger/neogit',
         requires = "nvim-lua/plenary.nvim",
@@ -51,10 +29,6 @@ return  {
             require "custom.configs.lspconfig"
         end,
 
-    },
-    {
-        "rcarriga/nvim-dap-ui",
-        dependencies = {"mfussenegger/nvim-dap"}
     },
     {
         "williamboman/mason.nvim",

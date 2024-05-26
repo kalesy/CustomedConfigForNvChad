@@ -85,6 +85,7 @@ M.general = {
         ["<C-Right>"] = { ":vertical resize +5<CR>", "expand horizontal window size" },
         ["<C-Up>"] = { ":resize -5<CR>", "shunk horizontal window size" },
         ["<C-Down>"] = { ":resize +5<CR>", "expand horizontal window size" },
+        [";"] = {":", "command mode"}
     },
     i = {
         ["<C-q>"] = { "<ESC>^i", "beginning of line" },

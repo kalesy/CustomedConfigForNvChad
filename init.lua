@@ -1,6 +1,5 @@
 local opt = vim.opt
 local g = vim.g
-local config = require("core.utils").load_config()
 -- Indenting
 opt.expandtab = true
 opt.shiftwidth = 4
@@ -11,10 +10,11 @@ opt.ignorecase = false
 opt.smartcase = false
 opt.swapfile = false
 
+opt.scrolloff = 10
+
 opt.autochdir = true --change current path when switch to another file
 opt.fileencodings={'utf-8', 'ucs-bom', 'shift-jis', 'gb18030', 'gbk', 'gb2312', 'cp936', 'utf-16-be', 'utf-16-le', 'utf-32-be', 'utf-32-le'}
 opt.guicursor='n-v:block,c-sm-i-ci-ve:hor20,r-cr-o:hor20,a:blinkwait700-blickoff400-blinkon250-Cursor/lCursor'
-g.mapleader = ';'
 -- Neovide gui configuration
 if vim.g.neovide then
     vim.o.guifont = "CaskaydiaCove Nerd Font Mono:h13"
