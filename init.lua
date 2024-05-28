@@ -10,6 +10,10 @@ opt.ignorecase = false
 opt.smartcase = false
 opt.swapfile = false
 
+opt.splitright = true
+opt.splitbelow = true
+opt.cursorline = true
+
 opt.scrolloff = 10
 
 opt.autochdir = true --change current path when switch to another file
@@ -19,6 +23,13 @@ opt.guicursor='n-v:block,c-sm-i-ci-ve:hor20,r-cr-o:hor20,a:blinkwait700-blickoff
 if vim.g.neovide then
     vim.o.guifont = "CaskaydiaCove Nerd Font Mono:h13"
     vim.g.neovide_remember_window_size = true
+end
+if vim.fn.filereadable(vim.fn.getcwd() .. '/project.godot') == 1 then
+    local addr = './godot.pipe'
+    if vim.fn.has 'win32' == 1 then
+        addr = '127.0.0.1:6005'
+    end
+    vim.fn.serverstart(addr)
 end
 
 return {

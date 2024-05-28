@@ -36,8 +36,16 @@ return  {
             ensure_installed = {
                 "lua-language-server",
                 "pyright",
-                "gdtoolkit"
             }
+        }
+    },
+    {
+        "nvim-treesitter/nvim-treesitter",
+        opts = {
+            ensure_installed = {
+                "lua", "vim", "vimdoc", "python", "gdscript", "godot_resource", "gdshader"
+            },
+            auto_install = true
         }
     },
 }

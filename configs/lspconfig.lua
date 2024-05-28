@@ -53,10 +53,12 @@ lspconfig.pyright.setup{
     },
 }
 
-lspconfig.gdscript.setup{
+local gdscript_config = {
     on_attach = on_attach,
     capabilities = capabilities,
-    filetypes = {"gd", "gdscript", "gdscript3"},
-    --root_dir = util.root_pattern("project.godot", ".git"),
-    flags = {debounce_text_changes = 150,}
+    settings = {}
 }
+if vim.fn.has 'win32' == 1 then
+    gdscript_config['cmd'] = {'ncat', '127.0.0.1', '6005'}
+end
+lspconfig.gdscript.setup(gdscript_config)
